@@ -1,0 +1,26 @@
+{% extends "padre.html" %}
+
+{%  load static %}
+
+{% block contenido %}
+<h1> TURNOS </h1>
+
+   <form action="alta_turno" method="POST">
+    {% csrf_token %}
+       
+       <p>Fechaturno:</p>
+           <input type= "date" name= "Fechaturno" required> 
+
+       <p>Especialidad:</p>
+
+           <input type= "text" name= "Especialidad" required>
+       
+
+       <input type="submit" value="Enviar">
+
+
+   </form>
+
+
+
+        {% endblock %}

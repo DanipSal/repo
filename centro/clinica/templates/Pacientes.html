@@ -1,0 +1,35 @@
+{% extends "padre.html" %}
+
+{%  load static %}
+
+
+{% block contenido %}
+    {% for n in Paciente %}
+        <p>{{n.nombre}}</p>
+    {% endfor %}
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">nombre</th>
+            <th scope="col">DNI</th> 
+            <th scope="col">nacimiento</th>           
+          </tr>
+        </thead>
+        <tbody>
+            {% for n in Paciente %}
+            <tr>
+                <th scope="row">{{n.id}}</th>
+                <td>{{n.nombre}}</td>
+                <td>{{n.DNI}}</td>
+                <td>{{n.nacimiento}}</td>
+                
+            </tr>
+            {% endfor %}        
+        
+        </tbody>
+      </table>
+
+{% endblock %}
+

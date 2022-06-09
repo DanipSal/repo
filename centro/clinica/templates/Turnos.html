@@ -1,0 +1,34 @@
+{% extends "padre.html" %}
+
+{%  load static %}
+
+
+{% block contenido %}
+    {% for n in Turnos %}
+        <p>{{n.fechaturno}}</p>
+    {% endfor %}
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">fechaturno</th>
+            <th scope="col">especialidad</th> 
+               
+          </tr>
+        </thead>
+        <tbody>
+            {% for n in Turnos %}
+            <tr>
+                <th scope="row">{{n.id}}</th>
+                <td>{{n.fechaturno}}</td>
+                <td>{{n.especialidad}}</td>
+               
+                
+            </tr>
+            {% endfor %}        
+        
+        </tbody>
+      </table>
+
+{% endblock %}

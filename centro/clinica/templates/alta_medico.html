@@ -1,0 +1,28 @@
+{% extends "padre.html" %}
+
+
+
+{%  load static %}
+
+
+
+{% block contenido %}
+
+<h1> MEDICOS </h1>
+
+   <form action="alta_medico" method="POST">{% csrf_token %}
+      
+       <p>Medico:</p>
+           <input type= "text" name= "medico" required> 
+       <p>Especialidad:</p>
+           <input type="text" name="especialidad" required>
+       
+
+       <input type="submit" value="Enviar">
+
+
+   </form>
+
+
+
+        {% endblock %}
